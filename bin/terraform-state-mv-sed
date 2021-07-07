@@ -13,5 +13,5 @@ if [[ -z "$1" ]]; then
 fi
 
 while IFS= read -r item; do
-  echo terraform state mv "$item" $(sed -e "$1" <<< $item)
+  terraform state mv "$item" $(sed -e "$1" <<< $item)
 done
