@@ -1,6 +1,6 @@
 {
   "name": "terraform-state-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Query and modify your Terraform state using UNIX-y tools",
   "author": "Maciej Małecki <me@mmalecki.com>",
   "bin": {
