@@ -1,0 +1,11 @@
+{
+  "name": "terraform-state-tools",
+  "version": "0.0.0",
+  "description": "Query and modify your Terraform state using UNIX-y tools",
+  "author": "Maciej Małecki <me@mmalecki.com>",
+  "bin": {
+    "terraform-state-grep": "./bin/terraform-state-grep",
+    "terraform-state-mv-sed": "./bin/terraform-state-mv-sed"
+  },
+  "license": "MIT"
+}

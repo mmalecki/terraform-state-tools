@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+usage () {
+  cat <<EOF
+usage: terraform-state-grep PATTERN
+EOF
+}
+
+if [[ -z "$1" ]]; then
+  echo "error: grep pattern is required"
+  usage
+  exit 1
+fi
+
+terraform state list | grep "$1"

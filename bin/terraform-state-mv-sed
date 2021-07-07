@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+usage () {
+  cat <<EOF
+usage: STATE-LIST | terraform-state-mv-sed EXPRESSION
+example: terraform-state-grep 'aws_subnet.us-west-2-subnet-a' | terraform-state-mv-sed 's/us-west-2/private/g'
+EOF
+}
+
+if [[ -z "$1" ]]; then
+  echo "error: sed expression is required"
+  usage
+  exit 1
+fi
+
+while IFS= read -r item; do
+  echo terraform state mv "$item" $(sed -e "$1" <<< $item)
+done
